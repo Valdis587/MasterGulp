@@ -1,0 +1,126 @@
+.archive {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 10px;
+        @media(max-width: 620px) {
+            flex-wrap: wrap;
+         }
+    }
+    &__left {
+        flex: 1 1 960px;
+        width: 960px;
+        @media(max-width: 620px) {
+            flex: 1 1 100%;
+            width: 100%;  
+        }
+    }
+    &__row {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    &__col {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    &__right {
+        flex: 0 0 330px;
+        width: 330px;
+        @media(max-width: 620px) {
+            flex: 1 1 100%;
+            width: 100%;
+        }
+    }
+    .cart-item, .sidebar {
+        @media(max-width: 620px) {
+            margin: 0 auto;
+        }
+    }
+  
+
+    &__paginations {
+        text-align: center;
+        margin: 20px 0;
+    }
+    &__paginations-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+        .archive__paginations-list-active {
+            background-color: $ColorBlue;
+            border: 1px solid $ColorBlue;
+        }
+    }
+    &__paginations-list li a {
+        padding: 10px 15px;
+        border-radius: 3px;
+        border: 1px solid $ColorRed;
+        transition: 0.5s all ease 0.5s;
+        background-color: $ColorRed;
+    } 
+  
+    &__paginations-list li a:hover  {
+        background-color: $ColorBlue;
+        border: 1px solid $ColorBlue;
+    }
+    &__reviews {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    
+}
+
+.single { 
+    .site-head-title {
+        margin: 0;
+    }
+    &__img {
+        border-radius: 5px;
+        padding: 3px;
+    }
+    &__img-wrap {
+        max-width: 960px;
+        @include funcAdaptiv(height, 200, 445);
+     
+    }
+    &__img img {
+        width: 100%;
+        @include funcAdaptiv(height, 200, 445);  
+    }
+    &__wrapper {
+        padding: 3px;
+    }
+    &__wrapper-bg {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 10px;
+    }
+    &__name {
+        text-align: center;
+        font-size: 30px;
+    }
+    &__price {
+        text-align: center;
+        font-size: 25px;
+        color: $ColorRed;
+        font-style: italic;
+        font-weight: 700;
+    }
+    &__desc {
+        margin: 30px 0 0 0;
+    }
+    &__button {
+        text-align: center;
+        margin: 20px 0 0 0;
+    }
+    &__but {
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+}
